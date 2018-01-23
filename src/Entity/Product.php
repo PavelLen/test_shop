@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -30,6 +31,11 @@ class Product
      * @ORM\OneToMany(targetEntity="App\Entity\ProductModification", mappedBy="product")
      */
     private $modifications;
+
+    public function __construct()
+    {
+        $this->modifications = new ArrayCollection();
+    }
 
     /**
      * @return mixed

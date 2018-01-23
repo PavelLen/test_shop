@@ -25,10 +25,6 @@ class AppFixtures extends Fixture
         $manager->persist($product);
         $manager->persist($modification);
 
-        $product = new Product();
-        $product->setName('Sweater');
-        $product->setPrice('23.80');
-
         $modification = new ProductModification();
         $modification->setSize('M');
         $modification->setColor('red');
@@ -36,12 +32,7 @@ class AppFixtures extends Fixture
 
         $modification->setProduct($product);
 
-        $manager->persist($product);
         $manager->persist($modification);
-
-        $product = new Product();
-        $product->setName('Sweater');
-        $product->setPrice('23.80');
 
         $modification = new ProductModification();
         $modification->setSize('M');
@@ -50,12 +41,7 @@ class AppFixtures extends Fixture
 
         $modification->setProduct($product);
 
-        $manager->persist($product);
         $manager->persist($modification);
-
-        $product = new Product();
-        $product->setName('Sweater');
-        $product->setPrice('23.80');
 
         $modification = new ProductModification();
         $modification->setSize('S');
@@ -64,7 +50,6 @@ class AppFixtures extends Fixture
 
         $modification->setProduct($product);
 
-        $manager->persist($product);
         $manager->persist($modification);
 
         $product = new Product();
@@ -81,10 +66,6 @@ class AppFixtures extends Fixture
         $manager->persist($product);
         $manager->persist($modification);
 
-        $product = new Product();
-        $product->setName('Kimono');
-        $product->setPrice('39.99');
-
         $modification = new ProductModification();
         $modification->setSize('M');
         $modification->setColor('red');
@@ -92,12 +73,8 @@ class AppFixtures extends Fixture
 
         $modification->setProduct($product);
 
-        $manager->persist($product);
         $manager->persist($modification);
 
-        $product = new Product();
-        $product->setName('Kimono');
-        $product->setPrice('39.99');
 
         $modification = new ProductModification();
         $modification->setSize('XL');
@@ -106,12 +83,11 @@ class AppFixtures extends Fixture
 
         $modification->setProduct($product);
 
-        $manager->persist($product);
         $manager->persist($modification);
 
         $product = new Product();
         $product->setName('Kimono');
-        $product->setPrice('39.99');
+        $product->setPrice('42.99');
 
         $modification = new ProductModification();
         $modification->setSize('XL');

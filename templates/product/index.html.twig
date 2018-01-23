@@ -1,11 +1,24 @@
-{% extends 'base.html.twig' %}
+{% extends 'layout.html.twig' %}
 
 {%  block body %}
-    {% for product in products %}
+    {% for row in products %}
+        {% for product in row %}
+            <div class="col-md-4">
+                <div class="block">
+                    <div class="product">
+                        <a href="{{ path('app_home_show', { 'id': product.id }) }}"><img src="{{ asset('/assets/images/product.png') }}"></a>
+                    </div>
 
-        <strong>Name: </strong>  {{ product.name }} <br>
-        <strong>Price: </strong>  {{ product.price }} <br>
-
+                    <div class="info">
+                        <a href="{{ path('app_home_show', { 'id': product.id }) }}"><h4>{{ product.name }}</h4></a>
+                        <span class="description">
+                            test item description
+                        </span>
+                        <span class="price">${{ product.price }}</span>
+                        <a class="buy_now" href="#">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     {% endfor %}
-
 {% endblock %}
